@@ -1,7 +1,7 @@
 # Blame Your Provider
 
 This is a small stack which collects metrics of your internet. You can yeet
-this metrics to your provider, blaming them not giving you the internet
+this metrics to your provider, blaming them for not giving you the internet
 you deserve.
 
 ![Preview: one possible dashboard](screenshots/dashboard.png)
