@@ -7,6 +7,7 @@ volumes:
 services:
   influxdb:
     image: influxdb:1.8
+    restart: always
     environment: 
       - INFLUXDB_DB=telegrafdb
       - INFLUXDB_USER=telegraf
@@ -17,9 +18,11 @@ services:
   telegraf:
     build:
       context: src/telegraf
+    restart: always
     
   grafana:
     image: grafana/grafana:5.4.3
+    restart: always
     volumes: 
       - grafana_data:/var/lib/grafana
     ports:
