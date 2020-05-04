@@ -1,0 +1,26 @@
+version: "3.2"
+
+volumes:
+  influxdb_data:
+  grafana_data:
+
+services:
+  influxdb:
+    image: influxdb:1.7-alpine
+    environment: 
+      - INFLUXDB_DB=telegrafdb
+      - INFLUXDB_USER=telegraf
+      - INFLUXDB_USER_PASSWORD=superInsecureInfluxPassword
+    volumes: 
+      - influxdb_data:/var/lib/influxdb
+
+  telegraf:
+    build:
+      context: src/telegraf
+    
+  grafana:
+    image: grafana/grafana:5.4.3
+    volumes: 
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3000:3000"
