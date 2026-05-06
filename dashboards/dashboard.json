@@ -69,7 +69,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "exec_speedtest",
+          "measurement": "internet_speed",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -106,7 +106,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "exec_speedtest",
+          "measurement": "internet_speed",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
